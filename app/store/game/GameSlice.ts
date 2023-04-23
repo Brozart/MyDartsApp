@@ -2,7 +2,7 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 import { Player } from '../../domain/Player';
 
-interface GameState {
+export interface GameState {
   inProgress?: boolean;
   players?: Player[];
   type?: string;
