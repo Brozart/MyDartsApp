@@ -1,25 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import { Provider } from 'react-redux';
 
+import MainNavigator from './app/content/MainNavigator';
 import { store } from './app/store';
 
-export const App = () => {
+const App = () => {
   return (
     <Provider store={store}>
-      <View style={styles.container}>
-        <Text>MyDartsApp</Text>
-        <StatusBar style="auto" />
-      </View>
+      <NavigationContainer>
+        <MainNavigator />
+      </NavigationContainer>
     </Provider>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
