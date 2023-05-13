@@ -17,7 +17,7 @@ const GameOverview = ({ onNewGame, onContinueGame }: Props) => {
   return (
     <View>
       <Button title="Start new game" onPress={onNewGame} />
-      <Button title="Continue current game" onPress={onContinueGame} />
+      {game && <Button title="Continue current game" onPress={onContinueGame} />}
     </View>
   );
 };
