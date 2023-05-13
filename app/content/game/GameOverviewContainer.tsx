@@ -1,5 +1,5 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { Alert, Text, View } from 'react-native';
+import { Alert } from 'react-native';
 
 import GameOverview from './GameOverview';
 import { RootStackParamList, Screens } from '../../navigation/types';
