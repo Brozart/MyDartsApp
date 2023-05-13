@@ -1,7 +1,6 @@
 import { Button, View } from 'react-native';
-
-import { selectGame } from '../../store/game/GameSelectors';
-import { useAppSelector } from '../../store/hooks';
+import { selectGame } from 'store/game/GameSelectors';
+import { useAppSelector } from 'store/hooks';
 
 type Props = {
   /** Invoked when a new game is started */

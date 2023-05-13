@@ -1,6 +1,7 @@
+import { Game } from 'domain/Game';
+
 import { GameState } from './GameSlice';
 import { RootState } from '..';
-import { Game } from '../../domain/Game';
 
 const gameState = (state: RootState): GameState => state.game;
 

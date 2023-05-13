@@ -1,9 +1,9 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { RootStackParamList, Screens } from 'navigation/types';
 
 import GameOverviewContainer from './game/GameOverviewContainer';
 import HomeContainer from './home/HomeContainer';
 import StatisticsContainer from './statistics/StatisticsContainer';
-import { RootStackParamList, Screens } from '../navigation/types';
 
 const MainNavigator = () => {
   const RootDrawer = createDrawerNavigator<RootStackParamList>();

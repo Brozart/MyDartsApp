@@ -1,8 +1,8 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList, Screens } from 'navigation/types';
 import { Alert } from 'react-native';
 
 import GameOverview from './GameOverview';
-import { RootStackParamList, Screens } from '../../navigation/types';
 
 type Props = NativeStackScreenProps<RootStackParamList, Screens.GAME_OVERVIEW>;
 

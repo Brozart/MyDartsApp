@@ -1,7 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-
-import { Game, GameType, defaultGame } from '../../domain/Game';
-import { Player } from '../../domain/Player';
+import { Game, GameType, defaultGame } from 'domain/Game';
+import { Player } from 'domain/Player';
 
 export interface GameState {
   game?: Game;

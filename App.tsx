@@ -1,8 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
+import MainNavigator from 'content/MainNavigator';
 import { Provider } from 'react-redux';
-
-import MainNavigator from './app/content/MainNavigator';
-import { store } from './app/store';
+import { store } from 'store';
 
 const App = () => {
   return (
