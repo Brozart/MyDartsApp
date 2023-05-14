@@ -1,5 +1,5 @@
-import Button from 'components/Button';
-import { View } from 'react-native';
+import Button from 'common/components/Button';
+import FlexContainer from 'common/components/FlexContainer';
 import { selectGame } from 'store/game/GameSelectors';
 import { useAppSelector } from 'store/hooks';
 
@@ -15,10 +15,10 @@ const GameOverview = ({ onNewGame, onContinueGame }: Props) => {
 
   /** RENDER FUNCTIONS */
   return (
-    <View>
+    <FlexContainer grow alignItems="center" justifyContent="center">
       <Button title="Start new game" onPress={onNewGame} />
       {game && <Button title="Continue current game" onPress={onContinueGame} />}
-    </View>
+    </FlexContainer>
   );
 };
 

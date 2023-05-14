@@ -1,6 +1,6 @@
 import { DrawerHeaderProps } from '@react-navigation/drawer';
+import Text from 'common/components/Text';
 import Drawer from 'common/icons/drawer.svg';
-import Text from 'components/Text';
 import { useColorScheme } from 'nativewind';
 import { ViewProps, View, Pressable } from 'react-native';
 import Colors from 'tailwindcss/colors';
@@ -12,7 +12,7 @@ const DrawerHeader = ({ route, navigation }: Props) => {
 
   /** RENDER FUNCTIONS */
   return (
-    <View className="h-20 px-3 pt-5 flex-row items-center shadow dark:bg-stone-700">
+    <View className="h-20 px-3 pt-5 flex-row items-center dark:bg-stone-700">
       <Pressable onPress={navigation.toggleDrawer} className="pl-1 pr-7">
         <Drawer
           height={30}

@@ -10,7 +10,7 @@ type Props = Omit<TextProps, 'style'> & {
 
 const textStyles = {
   primary: 'text-stone-700 dark:text-white',
-  secondary: 'text-stone-400 dark:text-white',
+  secondary: 'text-stone-700 dark:text-white',
 };
 
 const Text = ({
