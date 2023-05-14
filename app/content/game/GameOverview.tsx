@@ -1,4 +1,5 @@
-import { Button, View } from 'react-native';
+import Button from 'components/Button';
+import { View } from 'react-native';
 import { selectGame } from 'store/game/GameSelectors';
 import { useAppSelector } from 'store/hooks';
 

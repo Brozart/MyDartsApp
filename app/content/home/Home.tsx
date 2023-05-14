@@ -1,4 +1,6 @@
-import { Button, View } from 'react-native';
+import Button from 'components/Button';
+import { useColorScheme } from 'nativewind';
+import { View } from 'react-native';
 
 type Props = {
   /** Invoked when the game button is pressed */
@@ -6,9 +8,17 @@ type Props = {
 };
 
 const Home = ({ onGamePressed }: Props) => {
+  const { colorScheme, setColorScheme } = useColorScheme();
+
   return (
-    <View>
-      <Button title="Start game" onPress={onGamePressed} />
+    <View className="flex-1 items-center justify-center dark:bg-stone-950">
+      <Button
+        title={`Toggle theme ${colorScheme}`}
+        onPress={() => {
+          setColorScheme(colorScheme === 'light' ? 'dark' : 'light');
+        }}
+      />
+      <Button title="Start game" variant="secondary" onPress={onGamePressed} />
     </View>
   );
 };
