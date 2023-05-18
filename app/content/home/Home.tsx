@@ -18,7 +18,7 @@ const Home = ({ onGamePressed }: Props) => {
           setColorScheme(colorScheme === 'light' ? 'dark' : 'light');
         }}
       />
-      <Button title="Start game" onPress={onGamePressed} />
+      <Button title="Start a game" onPress={onGamePressed} />
     </FlexContainer>
   );
 };

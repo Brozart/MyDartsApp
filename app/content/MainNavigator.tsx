@@ -4,7 +4,7 @@ import DrawerHeader from 'navigation/DrawerHeader';
 import { RootStackParamList, Screens } from 'navigation/types';
 import colors from 'tailwindcss/colors';
 
-import GameOverviewContainer from './game/GameOverviewContainer';
+import GameNavigator from './game/GameNavigator';
 import HomeContainer from './home/HomeContainer';
 import StatisticsContainer from './statistics/StatisticsContainer';
 
@@ -25,7 +25,7 @@ const MainNavigator = () => {
         drawerInactiveTintColor: colorScheme === 'light' ? undefined : colors.white,
       }}>
       <RootDrawer.Screen name={Screens.HOME} component={HomeContainer} />
-      <RootDrawer.Screen name={Screens.GAME_OVERVIEW} component={GameOverviewContainer} />
+      <RootDrawer.Screen name={Screens.GAME} component={GameNavigator} />
       <RootDrawer.Screen name={Screens.STATISTICS} component={StatisticsContainer} />
     </RootDrawer.Navigator>
   );

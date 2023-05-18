@@ -7,12 +7,12 @@ type Props = NativeStackScreenProps<RootStackParamList, Screens.HOME>;
 
 const HomeContainer = ({ navigation }: Props) => {
   /** HANDLER FUNCTIONS */
-  const handleNewGame = () => {
-    navigation.navigate(Screens.GAME_OVERVIEW);
+  const handleGamePressed = () => {
+    navigation.navigate(Screens.GAME, { screen: Screens.GAME_OVERVIEW });
   };
 
   /** RENDER FUNCTIONS */
-  return <Home onGamePressed={handleNewGame} />;
+  return <Home onGamePressed={handleGamePressed} />;
 };
 
 export default HomeContainer;
