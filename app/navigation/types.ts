@@ -5,7 +5,9 @@ export enum Screens {
 
   // Game module
   GAME = 'Game',
+
   GAME_OVERVIEW = 'Games',
+  GAME_FORM = 'GameForm',
 
   // Statistics module
   STATISTICS = 'Statistics',
@@ -13,6 +15,7 @@ export enum Screens {
 
 export type GameStackParamList = {
   [Screens.GAME_OVERVIEW]: undefined;
+  [Screens.GAME_FORM]: undefined;
 };
 
 export type RootStackParamList = {

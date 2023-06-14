@@ -9,12 +9,12 @@ type Props = Omit<PressableProps, 'style'> & {
 };
 
 const buttonStyles = {
-  primary: 'bg-red-300 p-3 m-3 rounded dark:bg-red-800 active:bg-red-500',
-  secondary: 'bg-stone-300 p-3 m-3 rounded dark:bg-stone-700 active:bg-stone-500',
+  primary: 'bg-red-300 p-3 rounded dark:bg-red-800 active:bg-red-500',
+  secondary: 'bg-stone-300 p-3 rounded dark:bg-stone-700 active:bg-stone-500',
 };
 
 const Button = ({ variant = 'primary', title, className, ...props }: Props) => {
-  const classes = clsx(buttonStyles[variant], className && className);
+  const classes = clsx(buttonStyles[variant], 'items-center', className && className);
 
   return (
     <Pressable {...props} className={classes}>

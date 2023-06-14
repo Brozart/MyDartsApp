@@ -2,8 +2,7 @@ import clsx from 'clsx';
 
 import Container, { ContainerProps } from './Container';
 
-type Props = ContainerProps & {
-  flex?: '1' | 'auto' | 'initial' | 'none';
+export type FlexContainerProps = ContainerProps & {
   grow?: boolean;
   direction?: 'row' | 'row-reverse' | 'col' | 'col-reverse';
   wrap?: 'wrap' | 'wrap-reverse' | 'nowrap';
@@ -14,7 +13,6 @@ type Props = ContainerProps & {
 };
 
 const FlexContainer = ({
-  flex = '1',
   grow,
   direction,
   wrap,
@@ -24,9 +22,9 @@ const FlexContainer = ({
   alignSelf,
   className,
   ...props
-}: Props) => {
+}: FlexContainerProps) => {
   const classes = clsx(
-    `flex flex-${flex}`,
+    `flex`,
     grow && 'grow',
     direction && `flex-${direction}`,
     wrap && `flex-${wrap}`,

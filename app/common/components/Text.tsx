@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { TextProps, Text as RNText } from 'react-native';
 
 type Props = Omit<TextProps, 'style'> & {
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'danger';
   fontWeight?: 'thin' | 'ligth' | 'normal' | 'medium' | 'bold';
   fontSize?: 'xs' | 'sm' | 'base' | 'lg' | 'xl';
   italic?: boolean;
@@ -11,6 +11,7 @@ type Props = Omit<TextProps, 'style'> & {
 const textStyles = {
   primary: 'text-stone-700 dark:text-white',
   secondary: 'text-stone-700 dark:text-white',
+  danger: 'text-red-500',
 };
 
 const Text = ({

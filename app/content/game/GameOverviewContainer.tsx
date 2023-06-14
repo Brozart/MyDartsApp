@@ -1,16 +1,15 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList, Screens } from 'navigation/types';
+import { GameStackParamList, Screens } from 'navigation/types';
 import { Alert } from 'react-native';
 
 import GameOverview from './GameOverview';
 
-type Props = NativeStackScreenProps<RootStackParamList, Screens.GAME_OVERVIEW>;
+type Props = NativeStackScreenProps<GameStackParamList, Screens.GAME_OVERVIEW>;
 
 const GameOverviewContainer = ({ navigation }: Props) => {
   /** HANDLER FUNCTIONS */
   const handleNewGame = () => {
-    // TODO navigate to new game form
-    Alert.alert('New game start');
+    navigation.navigate(Screens.GAME_FORM);
   };
 
   const handleContinueGame = () => {
